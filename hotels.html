@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-navigation">
+          <ul>
+            <li class="info">
+              <a href="#">Информация</a>
+            </li>
+            <li class="photo">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="sedona-city">
+              <a href="#"><img src="#" width=67 height=56 alt="Седона"></a>
+            </li>
+            <li class="map">
+              <a href="#">Карта штата</a>
+            </li>
+            <li class="hotels">
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>      
+    </header>
+    <main class="container">
+      <div>
+        <form type="post" action="#">
+          <fieldset class="infrastructure">
+            <legend>Инфраструктура:</legend>
+            <input name="filters" id="pool" type="checkbox" checked value="бассейн">
+            <label for="pool">Бассейн</label><br>
+            <input name="filters" id="parking" type="checkbox" value="парковка">
+            <label for="parking">Парковка</label><br>
+            <input name="filters" id="wi-fi" type="checkbox" value="wi-fi">
+            <label for="wi-fi">Wi-fi</label><br>
+          </fieldset>
+          <fieldset class="house-type">
+            <legend>Тип жилья:</legend>
+            <input name="filters" id="hotel" type="checkbox" checked value="гостиница">
+            <label for="hotel">Гостиница</label><br>
+            <input name="filters" id="motel" type="checkbox" checked value="мотель">
+            <label for="motel">Мотель</label><br>
+            <input name="filters" id="apartments" type="checkbox" checked value="апартаменты">
+            <label for="apartments">Апаратаменты</label><br>
+          </fieldset>
+          <fieldset class="cost">
+            <legend class="daytime-cost">Стоимость в сутки (Р):</legend>
+            <input>
+          </fieldset>
+          <input class="btn" type="submit" value="Показать">
+        </form>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <section class="footer-hashtag">
+          <a href="#">#VISITSEDONA</a>
+        </section>
+        <section class="footer-social">
+          <a class="social-btn social-btn-twt" href="#">Твиттер</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-tube" href="#">Ютьюб</a>
+        </section>
+        <section class="footer-copyright">
+          <p>WEBSITE BY</p>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
