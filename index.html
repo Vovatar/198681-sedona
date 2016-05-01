@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <main class="container">
       <header class="main-header">
-        <div class="container">
+        <div class="clearfix">
          <nav class="main-navigation">
             <ul class="left-side main-menu">
               <li class="info">
@@ -31,52 +31,58 @@
         </div>      
       </header>
         <div class="main">
-          <img src="img/sedona.jpg" width="100%">
-          <img src="img/white.png" width="100%">
+          <div class="main-img">
+            <img class="background" src="img/sedona.jpg" width="100%">
+            <img class="mask" src="img/white.png" width="100%">
+            <img class="img-text" src="img/sedona_text.png">
+          </div>
           <h1 class="main-info">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p class="main-info-reasons">Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
-        </div>
-        <div class="reason-one">
+        <div class="reason-one clearfix">
           <div class="reason-one-general">
             <h3 class="reason-headline">Настоящий городок</h3>
             <b class="reason-number">-№1-</b>
             <p class="reason-text">Седона - не аттракциона для туристов, там течет своя жизнь</p>
+          </div>
             <img class="reason-one-img" src="img/reason_1.jpg" alt="Первая причина">
-            <div class="reason-content-one">
-              <img src="img/house.png" width="75" height="72" alt="Жилье">
-              <h3>Жилье</h3>
-              <p class="content-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </div>
-            <div class="reason-content-two">
-              <img src="img/burger.png" width="75" height="72" alt="бургер">
-              <h3>Еда</h3>
-              <p class="content-text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
-            </div>
-            <div class="reason-content-three">
-              <img src="img/souvenir.png" width="75" height="72" alt="подарок">
-              <h3>Сувениры</h3>
-              <p class="content-text">Не только китайского, но и местного производства!</p>
-            </div>
+        </div>
+        <div class="features clearfix">
+          <div class="reason-content">
+            <img src="img/house.png" width="75" height="72" alt="Жилье">
+            <h3>Жилье</h3>
+            <p class="content-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
-          <div class="reason-two">
-            <img class="reason-two-img" src="img/reason_2.jpg" alt="Вторая причина">
-            <div class="reason-two-general">
-              <h3 class="reason-headline">Там есть мост дьявола</h3>
-              <b class="reason-number">-№3-</b>
-              <p class="reason-text">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-            </div>
+          <div class="reason-content">
+            <img src="img/burger.png" width="75" height="72" alt="бургер">
+            <h3>Еда</h3>
+            <p class="content-text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </div>
-          <div class="other-reasons">
+          <div class="reason-content">
+            <img src="img/souvenir.png" width="75" height="72" alt="подарок">
+            <h3>Сувениры</h3>
+            <p class="content-text">Не только китайского, но и местного производства!</p>
+          </div>
+        </div>
+        <div class="reason-two clearfix">
+          <img class="reason-two-img" src="img/reason_2.jpg" alt="Вторая причина">
+          <div class="reason-two-general">
+            <h3 class="reason-headline">Там есть мост дьявола</h3>
+            <b class="reason-number">-№2-</b>
+            <p class="reason-text">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+          </div>
+        </div>
+        <div class="features">  
+          <div class="reason-content">
             <h3 class="other-reasons-headline">Небольшая площадь</h3>
             <p class="other-reasons-number">-№3-</p>
             <p class="other-reasons-text">Все достопримечательности находятся очень близко</p>
           </div>
-          <div class="other-reasons">
+          <div class="reason-content">
             <h3 class="other-reasons-headline">Красивая дорога</h3>
             <p class="other-reasons-number">-№4-</p>
             <p class="other-reasons-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
-          <div class="other-reasons">
+          <div class="reason-content">
             <h3 class="other-reasons-headline">Мало туристов</h3>
             <p class="other-reasons-number">-№5-</p>
             <p class="other-reasons-text">Большинство едет в Гранд Каньон и толпится там</p>
@@ -109,8 +115,9 @@
             </form>
           </div>
         </div>
+      </div>    
       <footer class="main-footer">
-        <div class="container">
+        <div class="">
           <section class="footer-hashtag">
             <a href="#">#VISITSEDONA</a>
           </section>
