@@ -3,48 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <main class="container">
-      <header class="main-header">
-        <div class="clearfix">
-         <nav class="main-navigation">
-            <ul class="left-side main-menu">
-              <li class="info">
-                <a href="#">Информация</a>
-              </li>
-              <li class="photo">
-                <a href="#">Фото и видео</a>
-              </li>
-            </ul> 
-            <a class="logo" href="#"><img src="img/main_page.png" width="138" height="70" alt="Седона"></a>
-            <ul class="right-side main-menu">
-              <li class="map">
-                <a href="#">Карта штата</a>
-              </li>
-              <li class="hotels">
-                <a href="#">Гостиницы</a>
-              </li>
-            </ul>
-          </nav>
-        </div>      
+      <header class="main-header clearfix">
+        <nav class="main-navigation">
+          <ul class="main-menu">
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Фото и видео</a>
+            </li>
+            <li>
+              <a class="logo" href="#"><img src="img/main_page.png" width="138" height="70" alt="Седона"></a>
+            </li>
+            <li>
+              <a href="#">Карта штата</a>
+            </li>
+            <li>
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>    
       </header>
         <div class="main">
-          <div class="main-img">
-            <img class="background" src="img/sedona.jpg" width="100%">
+          <div class="main-img clearfix">
+            <a href="#">
+            <img class="background" src="img/sedona.jpg">
             <img class="mask" src="img/white.png" width="100%">
             <img class="img-text" src="img/sedona_text.png">
+            </a>
           </div>
-          <h1 class="main-info">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <h1 class="main-info">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
           <p class="main-info-reasons">Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
         <div class="reason-one clearfix">
           <div class="reason-one-general">
-            <h3 class="reason-headline">Настоящий городок</h3>
-            <b class="reason-number">-№1-</b>
-            <p class="reason-text">Седона - не аттракциона для туристов, там течет своя жизнь</p>
+            <h3 class="reason-headline">Настоящий<br>городок</h3>
+            <p class="reason-number">- №1 -</p>
+            <p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-            <img class="reason-one-img" src="img/reason_1.jpg" alt="Первая причина">
+          <div class="reason-one-img">
+            <img src="img/reason_1.jpg" width="512" height="256" alt="Первая причина">
+          </div>
         </div>
         <div class="features clearfix">
           <div class="reason-content">
@@ -64,28 +67,28 @@
           </div>
         </div>
         <div class="reason-two clearfix">
-          <img class="reason-two-img" src="img/reason_2.jpg" alt="Вторая причина">
+          <img class="reason-two-img" src="img/reason_2.jpg" width="512" height="256" alt="Вторая причина">
           <div class="reason-two-general">
             <h3 class="reason-headline">Там есть мост дьявола</h3>
-            <b class="reason-number">-№2-</b>
+            <p class="reason-number">- №2 -</p>
             <p class="reason-text">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
           </div>
         </div>
-        <div class="features">  
+        <div class="reasons">  
           <div class="reason-content">
-            <h3 class="other-reasons-headline">Небольшая площадь</h3>
-            <p class="other-reasons-number">-№3-</p>
-            <p class="other-reasons-text">Все достопримечательности находятся очень близко</p>
+            <h3 class="reasons-headline">Небольшая площадь</h3>
+            <p class="reason-number">- №3 -</p>
+            <p class="content-text">Все достопримечательности находятся очень близко</p>
           </div>
           <div class="reason-content">
-            <h3 class="other-reasons-headline">Красивая дорога</h3>
-            <p class="other-reasons-number">-№4-</p>
-            <p class="other-reasons-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <h3 class="reasons-headline">Красивая дорога</h3>
+            <p class="reason-number">- №4 -</p>
+            <p class="content-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="reason-content">
-            <h3 class="other-reasons-headline">Мало туристов</h3>
-            <p class="other-reasons-number">-№5-</p>
-            <p class="other-reasons-text">Большинство едет в Гранд Каньон и толпится там</p>
+            <h3 class="reasons-headline">Мало туристов</h3>
+            <p class="reason-number">- №5 -</p>
+            <p class="content-text">Большинство едет в Гранд Каньон и толпится там</p>
           </div>      
         </div>
         <div class="hotel-reserve">
@@ -94,7 +97,6 @@
           <div class="search-form">
             <form method="post" action="#">
               <a class="form-btn" href="#">Поиск гостиницы в Седоне</a>
-              <div class="map"><img src="img/map.jpg"></div>
               <div class="dates">
               <label for="arrival">Дата заезда:</label>
               <input name="hotels" id="arrival" type="date" value="2016-04-24">
@@ -115,9 +117,10 @@
             </form>
           </div>
         </div>
-      </div>    
+      </div>
+      <div class="map"><img src="img/map.jpg"></div>
       <footer class="main-footer">
-        <div class="">
+        <div class="footer">
           <section class="footer-hashtag">
             <a href="#">#VISITSEDONA</a>
           </section>
