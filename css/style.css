@@ -40,6 +40,11 @@ body {
   line-height: 26px;
   display: inline-block;
   vertical-align: top;
+  font-family: "PT Sans";
+}
+
+.main-navigation a:hover {
+ color: #81b3d2; 
 }
 
 .main-navigation img {
@@ -218,10 +223,76 @@ body {
   padding: 35px 0;
 }
 
+.hotel-reserve {
+  margin-top: 50px;
+}
+
+.interest {
+  font-size: 30px;
+  margin-bottom: 33px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 49px;
+}
 
 .search-form {
+  width: 568px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-btn {
+  font-size: 21px;
+  line-height: 26px;
+  display: block;
+  padding: 30px 0;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.form-hidden {
+  padding: 55px;
+}
+
+.dates {
   width: 100%;
-  min-height: 217px;
+  margin-top: 15px;
+}
+
+.adults {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.kids {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.btn {
+  width: 458px;
+  background-color: #81b3d2;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #669ec0;
+}
+
+.search-form-hotels {
+  width: 100%;
+  background: #6686ac url(../img/back_filter.jpg) no-repeat center;
+  color: #ffffff;
+  list-style: none;
 }
 
 .infrastructure {
@@ -231,7 +302,7 @@ body {
 
 .house-type {
   float: left;
-  width: 29%;
+  width: 30%;
 }
 
 .cost {
@@ -285,16 +356,15 @@ body {
 }
 
 .main-footer {
-  margin-top: 65px;
-  padding-top: 60px;
-  padding-bottom: 40px;
   color: #000000;
   background-color: #ffffff;
+  min-height: 120px;
 }
 
 .footer-hashtag {
   width: 33%;
   float: left;
+  margin-top: 50px;
 }
 
 .footer-hashtag a {
@@ -308,20 +378,45 @@ body {
   width: 33%;
   float: left; 
   text-align: center;
+  margin-top: 36px;
+  
 }
 
 .social-btn {
   display: inline-block;
-  width: 46px;
+  width: 48px;
   height: 48px;
   margin: 0 3px;
-  background-color: #81b3d2;
+  background: #81b3d2 url(../img/sprite.png) no-repeat center;
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
 }
 
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
 .footer-copyright {
   width: 33%;
   float: right;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 55px;
+}
+
+.social-btn-fb {
+    background-position: -8px -12px;
+}
+
+.sprite-star {
+    background-position: -5px -34px;
+}
+
+.social-btn-tube {
+    background-position: -10px -145px;
+}
+
+.social-btn-twt {
+    background-position: -10px -210px;
 }
