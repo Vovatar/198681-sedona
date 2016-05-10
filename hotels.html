@@ -8,27 +8,26 @@
   </head>
   <body>
     <main class="container">
-      <header class="main-header">
-        <div class="clearfix">
-         <nav class="main-navigation">
-            <ul class="main-menu">
-              <li class="info">
+      <header class="main-header clearfix">
+        <nav class="main-navigation">
+            <ul class="left-side">
+              <li>
                 <a href="#">Информация</a>
               </li>
-              <li class="photo">
+              <li>
                 <a href="#">Фото и видео</a>
               </li>
+            </ul>
+            <a class="logo" href="#"><img src="img/main_page.png" width="138" height="70" alt="Седона"></a>
+            <ul class="right-side">
               <li>
-                <a class="logo" href="#"><img src="img/main_page.png" width="138" height="70" alt="Седона"></a>
-              </li>
-              <li class="map">
                 <a href="#">Карта штата</a>
               </li>
-              <li class="hotels">
+              <li>
                 <a href="#">Гостиницы</a>
               </li>
             </ul>
-          </nav>
+        </nav>   
         </div>      
       </header>
       <div class="search-form-hotels clearfix">
@@ -49,7 +48,7 @@
               <input name="filters" id="motel" type="checkbox" checked value="мотель">
               <label for="motel">Мотель</label><br>
               <input name="filters" id="apartments" type="checkbox" checked value="апартаменты">
-              <label for="apartments">Апаратаменты</label><br>
+              <label for="apartments">Апартаменты</label><br>
             </div>
             <div class="cost">
               <div class="form-title">Стоимость в сутки (Р):</div>
@@ -71,12 +70,16 @@
         <div class="search-results">
           <div class="results-title clearfix">            
             <h2>Найдено:3</h2>
-            Сортировка:
-            <a href="#" class="sort-type">По цене</a>
-            <a href="#" class="sort-type">По типу</a>
-            <a href="#" class="sort-type">По рейтингу</a>
-            <a href="#" class="ascending">По возрастанию</a>
-            <a href="#" class="descending">По убыванию</a>
+            <div class="sort-type">
+              Сортировка:
+              <a href="#">По цене</a>
+              <a href="#">По типу</a>
+              <a href="#">По рейтингу</a>
+            </div>
+            <div>
+              <a href="#" class="ascending">По возрастанию</a>
+              <a href="#" class="descending">По убыванию</a>
+            </div>
           </div>
           <div class="results clearfix">
             <img class="results-img" src="img/hotel.jpg" width="135" height="90" alt="отель">
@@ -87,7 +90,7 @@
               <div class="details-btn"><a href="#">Подробнее</a></div>
               <div class="reserve-btn"><a href="#">Забронировать</a></div>
              </div>
-            <div class="star star-4"><img src="img/star.png"></div>
+            <div class="star star-4">четыре звезды</div>
             <div class="rating">Рейтинг:8,5</div>          
             </div>
           <div class="results clearfix">
@@ -99,7 +102,7 @@
               <div class="details-btn"><a href="#">Подробнее</a></div>
               <div class="reserve-btn"><a href="#">Забронировать</a></div>
             </div>
-            <div class="star star-2"><img src="img/star.png"></div>
+            <div class="star star-2">две звезды</div>
             <div class="rating">Рейтинг:8,9</div>
           </div>
           <div class="results clearfix">
@@ -111,7 +114,7 @@
               <div class="details-btn"><a href="#">Подробнее</a></div>
               <div class="reserve-btn"><a href="#">Забронировать</a></div>
             </div>
-            <div class="star star-3"><img src="img/star.png"></div>
+            <div class="star star-3">три звезды</div>
             <div class="rating">Рейтинг:9,2</div>
           </div>
         </div>
@@ -126,8 +129,7 @@
             <a class="social-btn social-btn-tube" href="#">Ютьюб</a>
           </section>
           <section class="footer-copyright">
-            <p>WEBSITE BY</p>
-            <a class="btn-copyright" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="113" height="39" alt="HTML Academy"></a>
+            WEBSITE BY<a class="btn-copyright" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="113" height="39" alt="HTML Academy"></a>
           </section>
         </div>
       </footer>

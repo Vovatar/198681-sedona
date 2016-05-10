@@ -1,5 +1,4 @@
 body {
-  min-width: 768px;
   font-size: 14px;
   line-height: 26px;
   font-family: "PT Sans" , "arial", sans-serif;
@@ -26,7 +25,6 @@ body {
 }
 
 .main-navigation {
-  min-width: 768px;
   text-align: center;
   position: relative;
 }
@@ -47,18 +45,25 @@ body {
  color: #81b3d2; 
 }
 
+.logo {
+  font-size: 0;
+}
+
 .main-navigation img {
   width: 138px;
   height: 70px;
   position: absolute;
   top: 0;
-  left: 46%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -69px;
 }
 
 .main-navigation ul {
   display: table;
   table-layout: fixed;
   font-size: 0;
+  width: 40%;  
 }
 
 .main-navigation li {
@@ -67,32 +72,35 @@ body {
 
 .left-side {
   float: left;
-  margin-left: 6%;
-  width: 40%;
 }
 
 .right-side {
   float: right;
-  margin-right: 6%;
-  width: 40%;
 }
 
 .main-img {
-  margin-top: -24px;
   padding: 0;
   font-size: 0;
   width: 100%;
   background-color: #e1edf5;
   position: relative;
-  max-height: 512px;
   border: none;
-  
 }
 
 .background {
   width: 100%;
-  min-width: 768px;
-  max-height: 512px;
+  overflow: hidden;
+}
+
+.img-text {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 458px;
+  height: 352px;
+  margin-bottom: 80px;
+  margin-left: -229px;
+  margin-top: 76px;
 }
 
 .mask {
@@ -100,17 +108,6 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-}
-
-.img-text {
-  position: absolute;
-  top: 76px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 458px;
-  height: 352px;
-  margin: 0 auto;
 }
 
 .main-info {
@@ -123,6 +120,7 @@ body {
   font-size: 14px;
   line-height: 26px;
   margin: 33px 0;
+  font-weight: 100;
 }
 
 .reason-one {
@@ -158,6 +156,7 @@ body {
   padding: 5px 30px;
   padding-bottom: 20px;
   margin: 0;
+  font-weight: 100;
 }
 
 .reason-one-img {
@@ -196,6 +195,7 @@ body {
 
 .content-text {
   padding: 0 50px;
+  font-weight: 100;
 }
 
 .reason-two-img {
@@ -225,6 +225,7 @@ body {
   padding: 5px 30px;
   padding-bottom: 20px;
   margin: 0;
+  font-weight: 100;
 }
 
 .reasons {
@@ -246,6 +247,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 49px;
+  font-weight: 100;
 }
 
 .search-form {
@@ -265,7 +267,13 @@ body {
 }
 
 .form-hidden {
-  padding: 55px;
+  padding-top: 55px;
+  display: none;
+}
+
+.form-show {
+  padding-top: 55px;
+  display: block;
 }
 
 .dates {
@@ -303,7 +311,6 @@ body {
   background: #6686ac url(../img/back_filter.jpg) no-repeat center;
   color: #ffffff;
   text-align: left;
-  margin-top: -20px;
   padding-top: 26px;
   font-weight: 600;
   font-size: 16px;
@@ -312,7 +319,6 @@ body {
 
 .infrastructure {
   float: left;
-  width: 23%;
   margin-left: 40px;
   padding-bottom: 30px;
 }
@@ -332,7 +338,6 @@ body {
   
 .house-type {
   float: left;
-  width: 23%;
   margin-left: 40px;
   padding-bottom: 30px;
 }
@@ -343,6 +348,7 @@ body {
   font-size: 14px;
   font-weight: 100;
   margin-top: 23px;
+  cursor: pointer;
 }
 
 .house-type input {
@@ -351,7 +357,6 @@ body {
 
 .cost {
   float: right;
-  width: 30%;
   margin-right: 40px;
 }
 
@@ -474,22 +479,62 @@ body {
 
 .results-title {
   display: inline-block;
+  padding: 38px 0;
   width: 100%;
-  padding: 10px 0;
-  padding-left: 72px;
+  position: relative;
 }
 
 .results-title h2 {
-  float:left;
+  position: absolute;
+  left: 72px;  
+  margin: 0;
+  margin-right: 52px;
 }
 
-.results-title a {
+.sort-type {
+  position: absolute;
+  left: 235px;
+  top: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 100;
+}
+
+.sort-type a {
   text-decoration: none;
   color: #d1d1d1;
-  border-bottom: 1px dashed #81b3d2;  
+  border-bottom: 1px dashed #81b3d2;
+  cursor: pointer;
 }
 
-.results-title a:hover {
+.ascending {
+  text-decoration: none;
+  font-size: 0;
+  position: absolute;
+  top: 40px;
+  right: 105px;
+  width: 10px;
+  height: 11px;
+  background: #ffffff url(../img/sprite.png) no-repeat center;
+  background-position: -15px -54px;
+  cursor: pointer;
+}
+
+.descending {
+  text-decoration: none;
+  font-size: 0;
+  position: absolute;
+  top: 40px;
+  right: 82px;
+  width: 10px;
+  height: 11px;
+  background: #ffffff url(../img/sprite.png) no-repeat center;
+  background-position: -15px -54px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.sort-type a:hover {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;  
 }
@@ -498,6 +543,7 @@ body {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   padding: 30px 72px;
+  position: relative;
 }
 
 .results-img {
@@ -517,6 +563,7 @@ body {
   color: #000000;
   font-size: 21px;
   line-height: 26px;  
+  cursor: pointer;
 }
 
 .hotel-name:hover {
@@ -542,6 +589,7 @@ body {
   color: #ffffff;
   padding: 5px 0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .details-btn a {
@@ -549,20 +597,21 @@ body {
   color: #ffffff;
 }
 
-.details-btn a:hover {
-  
+.details-btn:hover {
+  background-color: #669ec0;  
 }
 
 .reserve-btn {
   display: inline-block;
   background-color: #766357;
-  width: 110px;
+  width: 142px;
   text-align: center;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  padding: 5px;
+  padding: 5px 0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .reserve-btn a {
@@ -570,18 +619,40 @@ body {
   color: #ffffff;
 }
 
-.star {
-  float: right;
+.reserve-btn:hover {
+  background-color: #604e43;
 }
 
-.rating {
-  float: right;
+.star {
+  position: absolute;
+  top: 30px;
+  right: 72px;
+  width: 25px;
+  font-size: 0;
+  background: #ffffff url(../img/sprite.png) no-repeat center;
+  background-position: -38px -185px;
+}
+
+.rating {  
+  position: absolute;
+  bottom: 30px;
+  right: 72px;
+  width: 110px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 100;
+  padding: 5px;
 }
 
 .main-footer {
   color: #000000;
   background-color: #ffffff;
   min-height: 120px;
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
 }
 
 .footer-hashtag {
@@ -625,21 +696,32 @@ body {
   float: right;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 55px;
+  margin-top: 35px;
+}
+
+.map {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 593px;
+  background: #e9e5dc url(../img/map.jpg) no-repeat center;
+  display: none;
 }
 
 .social-btn-fb {
-    background-position: -8px -12px;
+    background-position: -22px -108px;
 }
 
 .sprite-star {
-    background-position: -5px -34px;
+    background-position: -20px -200px;
 }
 
 .social-btn-tube {
-    background-position: -10px -145px;
+    background-position: -26px -240px;
 }
 
 .social-btn-twt {
-    background-position: -10px -210px;
+    background-position: -25px -305px;
 }

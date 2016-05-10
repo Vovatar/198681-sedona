@@ -98,7 +98,8 @@
         <div class="search-form">
           <form method="post" action="#">
             <a class="form-btn" href="#">Поиск гостиницы в Седоне</a>
-            <div class="form-hidden">
+            <div class="form-hidden">              
+              <div class="map"><img src="img/map.jpg"></div>
               <div class="dates">
               <label for="arrival"><b>Дата заезда:</b></label>
               <input name="hotels" id="arrival" type="date" value="2016-04-24">
@@ -119,8 +120,7 @@
             </div>
           </form>
         </div>
-        </div>
-      <div class="map"><img src="img/map.jpg"></div>
+        </div>      
       <footer class="main-footer">
         <div class="footer">
           <section class="footer-hashtag">
@@ -132,10 +132,18 @@
             <a class="social-btn social-btn-tube" href="#">Ютьюб</a>
           </section>
           <section class="footer-copyright">
-            <span>WEBSITE BY<a class="btn-copyright" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="113" height="39" alt="HTML Academy"></a></span>
+            WEBSITE BY<a class="btn-copyright" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="113" height="39" alt="HTML Academy"></a>
           </section>
         </div>
       </footer>
     </main>
+    <script>
+      var link = document.querySelector(".form-btn");
+      
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classlist.add("form-show");
+      });
+    </script>
   </body>
 </html>
