@@ -43,7 +43,7 @@
               <p class="reason-text">Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <div class="reason-one-img">
-              <img src="img/reason_1.jpg" width="512" height="256" alt="Первая причина">
+              <img src="img/reason_1.jpg" width="800" height="256" alt="Первая причина">
             </div>
           </div>
           <div class="features clearfix">
@@ -53,12 +53,12 @@
               <p class="content-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="reason-content">
-              <img src="img/burger.png" width="74" height="70" alt="бургер">
+              <img src="img/burger.png" width="74" height="74" alt="бургер">
               <h3>Еда</h3>
               <p class="content-text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
             </div>
             <div class="reason-content">
-              <img src="img/souvenir.png" width="64" height="76" alt="подарок">
+              <img src="img/souvenir.png" width="64" height="74" alt="подарок">
               <h3>Сувениры</h3>
               <p class="content-text">Не только китайского, но и местного производства!</p>
             </div>
@@ -75,17 +75,17 @@
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Небольшая<br>площадь</h3>
               <p class="reason-number">&mdash; №3 &mdash;</p>
-              <p class="content-text">Все достопримечательности находятся очень близко</p>
+              <p class="reason-rest-text">Все достопримечательности находятся очень близко</p>
             </div>
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Красивая<br>дорога</h3>
               <p class="reason-number">&mdash; №4 &mdash;</p>
-              <p class="content-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="reason-rest-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Мало<br>туристов</h3>
               <p class="reason-number">&mdash; №5 &mdash;</p>
-              <p class="content-text">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="reason-rest-text">Большинство едет в Гранд Каньон и толпится там</p>
             </div>      
           </div>
           <div class="hotel-reserve">
@@ -95,23 +95,29 @@
           <div class="search-form">
             <form method="post" action="#">
               <a class="form-btn" href="#">Поиск гостиницы в Седоне</a>
-              <div class="form-hidden">              
+              <div class="form form-hidden">              
                 <div class="dates">
                   <label for="arrival"><b>Дата заезда:</b></label>
                   <input name="hotels" id="arrival" type="date" value="2016-04-24">
+                  <button class="calendar"></button>
                 </div>
                 <div class="dates">
                   <label for="departure"><b>Дата выезда:</b></label>
                   <input name="hotels" id="departure" type="date" value="2016-07-04">
+                  <button class="calendar"></button>
                 </div>
                 <div class="count clearfix">
                   <div class="adults">
                     <label for="adults"><b>Взрослые:</b></label>
+                    <button class="decrease">&#8211;</button>
                     <input name="hotels" id="adults" type="number" value="2">
+                    <button class="increase">&#43;</button>
                   </div>
                   <div class="kids">
                     <label for="kids"><b>Дети:</b></label>
+                    <button class="decrease">&#8211;</button>
                     <input name="hotels" id="kids" type="number" value="0">
+                    <button class="increase">&#43;</button>
                   </div>
                   <input class="btn" type="submit" value="Найти">
                 </div>
@@ -132,18 +138,17 @@
           </section>
           <section class="footer-copyright">
             <p>WEBSITE BY</p>
-            <a class="btn-copyright" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="113" height="39" alt="HTML Academy"></a>
+            <a class="btn-copyright" href="https://htmlacademy.ru"></a>
           </section>
         </div>
       </footer>
     </main>
     <script>
       var link = document.querySelector(".form-btn");
-      var link = documant.querySelector(".form-hidden");
-      alert(link);
+      var link = document.querySelector(".form");
       link.addEventListener("click", function(event) {
         event.preventDefault();
-        popup.classlist.add("form-show");
+        popup.classlist.remove("form-hidden");
       });;
     </script>
   </body>
