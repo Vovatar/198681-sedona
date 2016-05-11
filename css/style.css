@@ -74,36 +74,22 @@ body {
 }
 
 .main-img {
-  padding: 0;
-  font-size: 0;
-  width: 100%;
-  max-height: 509px;
-  background-color: #e1edf5;
-  position: relative;
-  border: none;
+  background: url(../img/white.png), url(../img/sedona.jpg);
+  background-color: #eledf5;
+  background-repeat: no-repeat;
+  background-position: 50% 100%, 50% 0;
+  background-size: 100% auto, auto;
 }
 
 .background {
-  width: 100%;
   overflow: hidden;
-  max-height: 509px;
 }
 
 .img-text {
-  position: absolute;
-  left: 50%;
-  top: 78px;
-  width: 458px;
-  height: 352px;
-  margin-bottom: 80px;
-  margin-left: -229px;
+  margin: 80px 0;
 }
 
 .mask {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 
 .main-info {
@@ -128,21 +114,20 @@ body {
 }
 
 .reason-one-general {
-  width: 33%;
-  height: 216px;
+  width: 33.33%;
+  height: 256px;
   float: left;
   background-color: #81b3d2;
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
-  padding: 20px 0;
-  margin: 0;  
+  padding: 20px 50px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .reason-headline {
   display: block;
-  margin: 0;
-  margin-top: 34px;
   font-size: 21px;
 }
 
@@ -150,8 +135,6 @@ body {
   display: block;
   font-size: 14px;
   line-height: 21px;
-  padding: 0 50px;
-  margin-top: 24px;
   font-weight: 100;
 }
 
@@ -159,12 +142,11 @@ body {
   display: inline-block;
   font-size: 14px;
   font-weight: 100;
-  padding: 0 50px;
   margin-top: 6px;
 }
 
 .reason-one-img {
-  width: 67%;
+  width: 66.67%;
   height: 256px;
   float: right;
   overflow: hidden;
@@ -187,18 +169,8 @@ body {
 }
 
 .reason-content {
-  width: 33%;
+  width: 33.33%;
   float: left;
-  margin-right: 6px;
-}
-
-.reason-content:nth-child(2) {
-  margin-top: 1px;
-}
-
-.reason-content:last-child {
-  margin-right: 0;
-  margin-top: -3px;
 }
 
 .reason-content h3 {
@@ -412,16 +384,16 @@ body {
   background: #6686ac url(../img/back_filter.jpg) no-repeat center;
   color: #ffffff;
   text-align: left;
-  padding-top: 26px;
+  padding: 26px 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+  margin-top: 2px;
 }
 
 .infrastructure {
   float: left;
-  margin-left: 40px;
-  padding-bottom: 30px;
+  margin-left: 70px;
 }
 
 .infrastructure label {
@@ -429,18 +401,17 @@ body {
   padding-left: 40px;
   font-size: 14px;
   font-weight: 100;
-  margin-top: 23px;
+  margin-top: 28px;
   cursor: pointer;
 }
 
 .infrastructure input {
-  position: relative;
+  display:none;
 }
   
 .house-type {
   float: left;
-  margin-left: 40px;
-  padding-bottom: 30px;
+  margin-left: 120px;
 }
 
 .house-type label {
@@ -448,7 +419,7 @@ body {
   padding-left: 40px;
   font-size: 14px;
   font-weight: 100;
-  margin-top: 23px;
+  margin-top: 27px;
   cursor: pointer;
 }
 
@@ -458,11 +429,11 @@ body {
 
 .cost {
   float: right;
-  margin-right: 40px;
+  margin-right: 70px;
+  margin-top: 1px;
 }
 
 .form-title {
-  margin-bottom: 9px;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;

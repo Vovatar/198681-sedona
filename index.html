@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -24,16 +25,14 @@
                 <a href="#">Карта штата</a>
               </li>
               <li>
-                <a href="#">Гостиницы</a>
+                <a href="hotels.html">Гостиницы</a>
               </li>
             </ul>
         </nav>    
       </header>
         <div class="main">
-          <div class="main-img clearfix">
-            <img class="background" src="img/sedona.jpg">
-            <img class="mask" src="img/white.png" width="100%">
-            <img class="img-text" src="img/sedona_text.png">
+          <div class="main-img">
+            <img class="img-text" src="img/sedona_text.png" alt="Welcome to Sedona" width="458" height="352">
           </div>
           <h1 class="main-info">Седона &mdash; небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
           <p class="main-info-reasons">Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
@@ -85,7 +84,7 @@
             </div>
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Мало<br>туристов</h3>
-              <p class="reason-number">&mdash; №5 &mdash;-</p>
+              <p class="reason-number">&mdash; №5 &mdash;</p>
               <p class="content-text">Большинство едет в Гранд Каньон и толпится там</p>
             </div>      
           </div>
@@ -140,11 +139,12 @@
     </main>
     <script>
       var link = document.querySelector(".form-btn");
-      
+      var link = documant.querySelector(".form-hidden");
+      alert(link);
       link.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classlist.add("form-show");
-      });
+      });;
     </script>
   </body>
 </html>
