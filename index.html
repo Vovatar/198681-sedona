@@ -64,7 +64,9 @@
             </div>
           </div>
           <div class="reason-two clearfix">
-            <img class="reason-two-img" src="img/reason_2.jpg" width="512" height="256" alt="Вторая причина">
+            <div class="reason-two-img">
+              <img src="img/reason_2.jpg" width="800" height="256" alt="Вторая причина">
+            </div>
             <div class="reason-two-general">
               <h3 class="reason-headline">Там есть<br>мост дьявола</h3>
               <p class="reason-number">&mdash; №2 &mdash;</p>
@@ -75,17 +77,17 @@
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Небольшая<br>площадь</h3>
               <p class="reason-number">&mdash; №3 &mdash;</p>
-              <p class="reason-rest-text">Все достопримечательности находятся очень близко</p>
+              <p class="reason-text">Все достопримечательности находятся очень близко</p>
             </div>
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Красивая<br>дорога</h3>
               <p class="reason-number">&mdash; №4 &mdash;</p>
-              <p class="reason-rest-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="reason-rest-content">
               <h3 class="reasons-headline">Мало<br>туристов</h3>
               <p class="reason-number">&mdash; №5 &mdash;</p>
-              <p class="reason-rest-text">Большинство едет в Гранд Каньон и толпится там</p>
+              <p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>
             </div>      
           </div>
           <div class="hotel-reserve">
@@ -95,29 +97,29 @@
           <div class="search-form">
             <form method="post" action="#">
               <a class="form-btn" href="#">Поиск гостиницы в Седоне</a>
-              <div class="form form-hidden">              
+              <div class="form form-hidden"> 
                 <div class="dates">
                   <label for="arrival"><b>Дата заезда:</b></label>
                   <input name="hotels" id="arrival" type="date" value="2016-04-24">
-                  <button class="calendar"></button>
+                  <button type="button" class="calendar"></button>
                 </div>
                 <div class="dates">
                   <label for="departure"><b>Дата выезда:</b></label>
                   <input name="hotels" id="departure" type="date" value="2016-07-04">
-                  <button class="calendar"></button>
+                  <button type="button" class="calendar"></button>
                 </div>
                 <div class="count clearfix">
                   <div class="adults">
                     <label for="adults"><b>Взрослые:</b></label>
-                    <button class="decrease">&#8211;</button>
+                    <button type="button" class="decrease">&#8211;</button>
                     <input name="hotels" id="adults" type="number" value="2">
-                    <button class="increase">&#43;</button>
+                    <button type="button" class="increase">&#43;</button>
                   </div>
                   <div class="kids">
                     <label for="kids"><b>Дети:</b></label>
-                    <button class="decrease">&#8211;</button>
+                    <button type="button" class="decrease">&#8211;</button>
                     <input name="hotels" id="kids" type="number" value="0">
-                    <button class="increase">&#43;</button>
+                    <button type="button" class="increase">&#43;</button>
                   </div>
                   <input class="btn" type="submit" value="Найти">
                 </div>
@@ -149,7 +151,7 @@
       
       link.addEventListener("click", function(event) {
         event.preventDefault();
-        popup.classlist.remove("form-hidden");
+        popup.classList.add("form-show");
       });
     </script>
   </body>

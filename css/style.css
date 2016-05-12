@@ -98,14 +98,14 @@ body {
 .main-info-reasons {
   font-size: 14px;
   line-height: 26px;
-  margin: 26px 0;
+  margin-top: 26px;
+  margin-bottom: 50px;
   font-weight: 100;
 }
 
 .reason-one {
   width: 100%;
   text-align: center;
-  margin: 50px 0;
   font-size: 0;
 }
 
@@ -117,8 +117,7 @@ body {
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
-  padding: 35px 40px;
-  margin: 0;
+  padding: 35px;
   box-sizing: border-box;
 }
 
@@ -131,6 +130,9 @@ body {
   display: block;
   font-size: 14px;
   line-height: 21px;
+  padding: 0 60px;
+  margin-top: 25px;
+  margin-bottom: 22px;
   font-weight: 100;
 }
 
@@ -138,28 +140,24 @@ body {
   display: block;
   font-size: 14px;
   font-weight: 100;
-  margin: 20px 0;
+  margin-top: -3px;
 }
 
 .reason-one-img {
   width: 66.67%;
+  height: 256px;
   float: right;
-}
-
-.reason-one-img img {
   overflow: hidden;
 }
 
-.features {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  margin-bottom: 67px;
-}
-
 .reason-content {
+  display: block;
+  vertical-align: middle;
   width: 33.33%;
+  padding-top: 62px;
+  height: 330px;
   float: left;
+  box-sizing: border-box;
 }
 
 .reason-content h3 {
@@ -179,6 +177,7 @@ body {
 
 .reason-two-img {
   width: 66.67%;
+  height: 256px;
   float: left;
   overflow: hidden;
 }
@@ -205,25 +204,15 @@ body {
 
 .reason-rest-content {
   width: 33.33%;
+  height: 256px;
   float: left;
-  padding: 25px 20px;
-  padding-bottom: 40px;
+  padding: 27px 20px;
   box-sizing: border-box;
 }
 
 .reasons-headline {  
   font-size: 21px;
   line-height: 21px;
-}
-
-.reason-number {
-  display: block;
-  font-size: 14px;
-  line-height: 21px;
-  padding: 0 60px;
-  margin-top: 25px;
-  margin-bottom: 22px;
-  font-weight: 100;
 }
 
 .reason-rest-text {
@@ -235,7 +224,7 @@ body {
 }
 
 .hotel-reserve {
-  margin-top: 60px;
+  margin-top: 56px;
 }
 
 .interest {
@@ -268,6 +257,7 @@ body {
 }
 
 .form {
+  display: block;
   padding: 55px;
   position: absolute;
   top: 85px;
@@ -278,6 +268,10 @@ body {
 
 .form-hidden {
   display: none;
+}
+
+.form-show {
+  display: block;
 }
 
 .dates {
@@ -321,7 +315,7 @@ body {
 
 .calendar:hover {
   background-color: #ebebeb;
-  background-position: -42px -3px;
+  background-position: -42px -4px;
 }
 
 .adults {
@@ -459,13 +453,12 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
 }
 
-.checkbox-indicator {
-  position: absolute;
+label::before {
   display: block;
-  margin-top: 25px;
+  
   width: 24px;
   height: 22px;
-  background-image: url(../img/sprite.png) no-repeat center;
+  background: url(../img/sprite.png);
   background-position: -5px -5px;
 }
 
@@ -811,16 +804,30 @@ input[type=number]::-webkit-outer-spin-button {
   width: 25px;
   font-size: 0;
   background: #ffffff url(../img/sprite.png) no-repeat center;
-  background-position: -38px -185px;
+  background-position: -35px -185px;
 }
+
+.star-4 {
+  width: 98px;
+}
+
+.star-2 {
+  width: 50px;
+}
+
+.star-3 {
+  width: 75px;
+}
+
 
 .rating {  
   position: absolute;
+  text-align: center;
   color: #666666;
   bottom: 27px;
   right: 66px;
   width: 110px;
-  display: inline-block;
+  display: block;
   background-color: #f2f2f2;
   font-size: 14px;
   line-height: 21px;
