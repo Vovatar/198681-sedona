@@ -433,10 +433,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .search-form-hotels {
   width: 100%;
-  background: #6686ac url(../img/back_filter.jpg) no-repeat center;
+  background: #6686ac url(../img/back_filter.jpg);
   color: #ffffff;
+  background-position: 0 50%;
   text-align: left;
-  padding: 26px 0;
+  padding: 30px 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -445,57 +446,71 @@ input[type=number]::-webkit-outer-spin-button {
 
 .infrastructure {
   float: left;
-  margin-left: 70px;
+  margin-left: 6%;
 }
 
 .infrastructure label {
-  display: inline-block;
+  display: block;
   padding-left: 40px;
   font-size: 14px;
   font-weight: 100;
-  margin-top: 28px;
+  margin-top: 25px;
   cursor: pointer;
+  position: relative;
+}
+
+.checkbox-indicator {
+  position: absolute;
+  display: block;
+  margin-top: 25px;
+  width: 24px;
+  height: 22px;
+  background-image: url(../img/sprite.png) no-repeat center;
+  background-position: -5px -5px;
 }
 
 .infrastructure input {
-  display:none;
+  display: none;
 }
   
 .house-type {
   float: left;
-  margin-left: 120px;
+  margin-left: 10%;
 }
 
 .house-type label {
-  display: inline-block;
+  display: block;
   padding-left: 40px;
   font-size: 14px;
   font-weight: 100;
-  margin-top: 27px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
-.house-type input {
+.house-type input[type="checkbox"] {
   display: none;
 }
 
 .cost {
   float: right;
-  margin-right: 70px;
-  margin-top: 1px;
+  margin-right: 6%;
+  width: 320px;
 }
 
 .form-title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  margin-top: -3px;
+  margin-bottom: 9px;
 }
 
 .price-control {
-  height: 36px;
+  height: 32px;
+  margin-top: 12px;
   margin-bottom: 20px;
   border: 2px solid #ffffff;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 0;
   position: relative;
 }
@@ -513,32 +528,32 @@ input[type=number]::-webkit-outer-spin-button {
 
 .price-control label {
   display: inline-block;
-  font-size: 14px;
-  line-height: 38px;
   vertical-align: top;
-  cursor: pointer;
+  font-size: 14px;
   font-weight: 100;
+  line-height: 30px;
+  cursor: pointer;
+  padding-left: 64px;
 }
 
 .price-control .min-price,
 .price-control .max-price {
   width: 90px;
-  padding-left: 65px;
 }
 
 .price-control input {
   width: 50px;
   margin: 0;
-  margin-top: -1px;
   color: inherit;
   font: inherit;
   background: none;
   border: none;
+  outline: none;
 }
 
 .range-controls {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 .range-controls .scale {
@@ -554,7 +569,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .range-toggle {
   position: absolute;
-  top: -9px;
+  top: -10px;
   width: 4px;
   height: 4px;
   background: #ababab;
@@ -579,7 +594,8 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-show {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  margin-top: -4px;
+  padding: 6px 38px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -589,7 +605,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 2px;
   outline: none;
   cursor: pointer;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .btn-show:hover {
@@ -602,33 +618,40 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .results-title {
-  display: inline-block;
-  padding: 38px 0;
+  padding: 13px 0;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 }
 
 .results-title h2 {
-  position: absolute;
-  left: 72px;  
-  margin: 0;
-  margin-right: 52px;
+  display: block;
+  float: left;
+  padding-left: 6%; 
+  margin-right: 47px;
 }
 
 .sort-type {
-  position: absolute;
-  left: 235px;
-  top: 40px;
+  display: block;
+  float: left;
+  margin-top: 23px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 100;
 }
 
 .sort-type a {
+  margin-left: 34px;
+  display: inline-block;
   text-decoration: none;
   color: #d1d1d1;
   border-bottom: 1px dashed #81b3d2;
   cursor: pointer;
+}
+
+.sort-type a:active {
+  color: #81b3d2;
+  border-bottom: none;
 }
 
 .ascending {
@@ -636,26 +659,47 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 0;
   position: absolute;
   top: 40px;
-  right: 105px;
+  right: 96px;
   width: 10px;
   height: 11px;
   background: #ffffff url(../img/sprite.png) no-repeat center;
-  background-position: -15px -54px;
+  background-position: -15px -14px;
   cursor: pointer;
+  transform: rotate(180deg);
+  opacity: 0.5;
+}
+
+.ascending:hover {
+  opacity: 1;
+}
+
+.ascending:active {
+  opacity: 1;
+  background-position: -15px -51px;
 }
 
 .descending {
   text-decoration: none;
   font-size: 0;
   position: absolute;
-  top: 40px;
-  right: 82px;
-  width: 10px;
+  top: 39px;
+  right: 72px;
+  width: 11px;
   height: 11px;
   background: #ffffff url(../img/sprite.png) no-repeat center;
-  background-position: -15px -54px;
-  transform: rotate(180deg);
+  background-position: -15px -14px;
   cursor: pointer;
+  opacity: 0.5;
+}
+
+.descending:hover {
+  opacity: 1;
+  background-position: -15px -14px;
+}
+
+.descending:active {
+  opacity: 1;
+  background-position: -15px -51px;
 }
 
 .sort-type a:hover {
@@ -666,27 +710,31 @@ input[type=number]::-webkit-outer-spin-button {
 .results {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px 72px;
+  padding: 0 6%;
   position: relative;
+  font-size: 0;
 }
 
 .results-img {
+  display: block;
   float: left;
+  margin: 29px 0;
   margin-right: 30px;
 }
 
 .results-info {
   float: left;
   text-align: left;
-  vertical-align: top; 
-  padding: 0;
+  vertical-align: top;
+  margin: 29px 0;
 }
 
 .hotel-name {
+  display: block;
   text-decoration: none;
   color: #000000;
   font-size: 21px;
-  line-height: 26px;  
+  line-height: 21px;  
   cursor: pointer;
 }
 
@@ -696,24 +744,33 @@ input[type=number]::-webkit-outer-spin-button {
 
 .results-info p {
   display: inline-block;
-  margin: 8px 0;
+  margin-top: 7px;
+  margin-right: 5px;
+  margin-bottom: 14px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 100;
   width: 110px;
 }
 
+.buttons {
+  display: block;
+  margin-bottom: -3px;
+}
+
 .details-btn {
   display: inline-block;
+  vertical-align: top;
   background-color: #81b3d2;
   width: 110px;
   text-align: center;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  padding: 5px 0;
+  padding: 3px 0;
   text-transform: uppercase;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .details-btn a {
@@ -733,7 +790,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  padding: 5px 0;
+  padding: 3px 0;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -749,8 +806,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .star {
   position: absolute;
-  top: 30px;
-  right: 72px;
+  top: 25px;
+  right: 68px;
   width: 25px;
   font-size: 0;
   background: #ffffff url(../img/sprite.png) no-repeat center;
@@ -760,8 +817,8 @@ input[type=number]::-webkit-outer-spin-button {
 .rating {  
   position: absolute;
   color: #666666;
-  bottom: 30px;
-  right: 72px;
+  bottom: 27px;
+  right: 66px;
   width: 110px;
   display: inline-block;
   background-color: #f2f2f2;
