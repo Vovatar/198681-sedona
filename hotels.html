@@ -13,7 +13,7 @@
         <nav class="main-navigation">
             <ul class="left-side">
               <li>
-                <a href="#">Информация</a>
+                <a href="index.html">Информация</a>
               </li>
               <li>
                 <a href="#">Фото и видео</a>
@@ -25,7 +25,7 @@
                 <a href="#">Карта штата</a>
               </li>
               <li>
-                <a href="#">Гостиницы</a>
+                <a class="active">Гостиницы</a>
               </li>
             </ul>
         </nav>    
@@ -34,21 +34,33 @@
           <form method="post" action="#">
             <div class="infrastructure">
               <div class="form-title">Инфраструктура:</div>
+              <div>
               <input name="filters" id="pool" type="checkbox" checked value="бассейн">
               <label for="pool">Бассейн</label>
+              </div>
+              <div>
               <input name="filters" id="parking" type="checkbox" value="парковка">
               <label for="parking">Парковка</label>
+              </div>
+              <div>
               <input name="filters" id="wi-fi" type="checkbox" value="wi-fi">
               <label for="wi-fi">Wi-fi</label>
+              </div>
             </div>
             <div class="house-type">
               <div class="form-title">Тип жилья:</div>
+              <div>
               <input name="filters" id="hotel" type="checkbox" checked value="гостиница">
               <label for="hotel">Гостиница</label>
+              </div>
+              <div>
               <input name="filters" id="motel" type="checkbox" checked value="мотель">
               <label for="motel">Мотель</label>
+              </div>
+              <div>
               <input name="filters" id="apartments" type="checkbox" checked value="апартаменты">
               <label for="apartments">Апартаменты</label>
+              </div>
             </div>
             <div class="cost">
               <div class="form-title">Стоимость в сутки (Р):</div>
@@ -68,17 +80,17 @@
           </form>
         </div>
         <div class="search-results">
-          <div class="results-title clearfix">            
+          <div class="results-title clearfix">
             <h2>Найдено: 3</h2>
             <div class="sort-type">
               Сортировка:
-              <a href="#">По цене</a>
+              <a class="active">По цене</a>
               <a href="#">По типу</a>
               <a href="#">По рейтингу</a>
             </div>
             <div>
               <a href="#" class="ascending">По возрастанию</a>
-              <a href="#" class="descending">По убыванию</a>
+              <a class="descending active">По убыванию</a>
             </div>
           </div>
           <div class="results clearfix">
