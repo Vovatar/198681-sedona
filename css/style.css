@@ -43,7 +43,7 @@ body {
   color: #81b3d2;
 }
 
-.main-navigation a:disabled {
+.main-navigation a:active {
   color: #dbd8d5;
 }
 
@@ -63,6 +63,10 @@ header a.active {
 
 header a.active:hover {
   color: #604e43;
+}
+
+header a.active:active {
+  color: #dbd8d5;
 }
 
 .main-navigation ul {
@@ -123,7 +127,7 @@ header a.active:hover {
 
 .reason-one-general {
   width: 33.33%;
-  height: 256px;
+  min-height: 256px;
   float: left;
   background-color: #81b3d2;
   font-size: 21px;
@@ -159,7 +163,6 @@ header a.active:hover {
   width: 66.67%;
   height: 256px;
   float: right;
-  overflow: hidden;
 }
 
 .reason-content {
@@ -167,7 +170,7 @@ header a.active:hover {
   vertical-align: middle;
   width: 33.33%;
   padding-top: 62px;
-  height: 330px;
+  min-height: 330px;
   float: left;
   box-sizing: border-box;
 }
@@ -189,14 +192,14 @@ header a.active:hover {
 
 .reason-two-img {
   width: 66.67%;
-  height: 256px;
+  min-height: 256px;
   float: left;
   overflow: hidden;
 }
 
 .reason-two-general {
   width: 33.33%;
-  height: 256px;
+  min-height: 256px;
   float: right;
   background-color: #81b3d2;
   font-size: 21px;
@@ -216,7 +219,7 @@ header a.active:hover {
 
 .reason-rest-content {
   width: 33.33%;
-  height: 256px;
+  min-height: 256px;
   float: left;
   padding: 27px 20px;
   box-sizing: border-box;
@@ -284,6 +287,18 @@ header a.active:hover {
 
 .form-show {
   display: block;
+  animation-name: form-appearance;
+  animation-duration: 0.5s;
+}
+
+@keyframes form-appearance {
+  0% {
+  opacity: 0;
+  }
+    
+  100% {
+  opacity: 1;
+  }
 }
 
 .dates {
@@ -323,12 +338,13 @@ header a.active:hover {
 .calendar {
   display: block;
   position: absolute;
-  right:0;
-  top:0;
+  right: 0;
+  top: 50%;
   width: 38px;
-  height: 38px;
+  height: 36px;
   background-color: #f2f2f2;
   border: none;
+  margin-top: -18px;
   margin-left: -5px;
   background-image: url(../img/sprite.png);
   background-position: -42px -73px;
@@ -339,8 +355,8 @@ header a.active:hover {
   background-position: -42px -4px;
 }
 
-.calendar:disabled {
-  background-position: -42px -39px;
+.calendar:active {
+  background-position: -42px -38px;
 }
 
 .adults {
@@ -371,7 +387,7 @@ header a.active:hover {
   color: #000000;
 }
 
-.increase:disabled {
+.increase:active {
   color: #81b3d2;
 }
 
@@ -392,7 +408,7 @@ header a.active:hover {
   color: #000000;
 }
 
-.decrease:disabled {
+.decrease:active {
   color: #81b3d2;
 }
 
@@ -430,12 +446,6 @@ header a.active:hover {
   width: 20px;
   margin-left: -5px;
 }
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;  
-}
-
 .btn {
   width: 458px;
   background-color: #81b3d2;
@@ -453,7 +463,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #669ec0;
 }
 
-.btn:disabled {
+.btn:active {
   background-color: #5496bd;
   color: #94b9d2;
 }
@@ -512,7 +522,7 @@ input[type="checkbox"]:checked + label:before {
   background-position: -15px -391px;
 }
 
-input[type="checkbox"]:disabled + label:before {
+input[type="checkbox"] + label:active:before {
   opacity: 0.5;
 }
 
@@ -576,6 +586,8 @@ input[type="checkbox"]:disabled + label:before {
   top: 50%;
   left: 50%;
   outline: none;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -712,7 +724,23 @@ input[type="checkbox"]:disabled + label:before {
   cursor: pointer;
 }
 
+.sort-type a:hover {
+  color: #81b3d2;
+  border-bottom: 1px dashed #81b3d2;  
+}
+
+.sort-type a:active {
+  color: #000000;
+  border-bottom: none;  
+}
+
+
 a.active {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+a.active:hover {
   color: #81b3d2;
   border-bottom: none;
 }
@@ -728,6 +756,8 @@ a.active {
   background: #ffffff url(../img/sprite.png) no-repeat center;
   background-position: -15px -14px;
   cursor: pointer;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   opacity: 0.5;
 }
@@ -765,11 +795,6 @@ a.active {
   background-position: -15px -51px;
 }
 
-.sort-type a:hover {
-  color: #81b3d2;
-  border-bottom: 1px dashed #81b3d2;  
-}
-
 .results {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -803,6 +828,10 @@ a.active {
 
 .hotel-name:hover {
   color: #a8c9df;
+}
+
+.hotel-name:active {
+  color: #cacaca;
 }
 
 .results-info p {
@@ -846,6 +875,11 @@ a.active {
   background-color: #669ec0;  
 }
 
+.details-btn:active {
+  background-color: #5496bd;
+  color: #85b0cd;
+}
+
 .reserve-btn {
   display: inline-block;
   vertical-align: top;
@@ -867,6 +901,11 @@ a.active {
 
 .reserve-btn:hover {
   background-color: #604e43;
+}
+
+.reserve-btn:active {
+  background-color: #503e33;
+  color: #72665f;
 }
 
 .star {
@@ -904,6 +943,18 @@ a.active {
   line-height: 21px;
   font-weight: 100;
   padding: 5px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
 }
 
 .main-footer {
@@ -979,15 +1030,16 @@ a.active {
   background-position: -3px -556px;
 }
 
-.footer-copyright a:disabled {
-  background-position: -3px -556px;
+.footer-copyright a:active {  
+  background-position: -3px -493px;
+  opacity: 0.5;
 }
 
 .social-btn-fb {
     background-position: -23px -107px;
 }
 
-.social-btn-fb:disabled {
+.social-btn-fb:active {
     background-position: -77px -107px;
 }
 
@@ -995,15 +1047,15 @@ a.active {
     background-position: -26px -240px;
 }
 
-.social-btn-tube:disabled {
-    background-position: -80px -240px;
+.social-btn-tube:active {
+    background-position: -81px -240px;
 }
 
 .social-btn-twt {
     background-position: -25px -305px;
 }
 
-.social-btn-twt:disabled {
+.social-btn-twt:active {
     background-position: -79px -305px;
 }
 
