@@ -287,8 +287,20 @@ header a.active:active {
 
 .form-show {
   display: block;
+  -webkit-animation-name: form-appearance;
   animation-name: form-appearance;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+}
+
+@-webkit-keyframes form-appearance {
+  0% {
+  opacity: 0;
+  }
+    
+  100% {
+  opacity: 1;
+  }
 }
 
 @keyframes form-appearance {
